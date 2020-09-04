@@ -33,7 +33,7 @@ perpetrator = [
 "a handicapped gentleman",
 "a triceratops named Penelope",
 "the inventor of the slanket",
-"the director of 101 Dalmations",
+"the director of 101 Dalmatians",
 "the little Asain kid from Indiana Jones",
 "a man with 6 fingers on his right hand",
 "my mom",
@@ -54,7 +54,7 @@ perpetrator = [
 ]
 
 delay = [
-"gave me a hicky.",
+"gave me a hickey.",
 "tried to kill me.",
 "ran me over with a diesel backhoe.",
 "died in front of me.",
