@@ -23,6 +23,7 @@ leadIn = [
 "I lost track of time because",
 "I feel terrible, but",
 "Don't blame me"
+"Please,forgive me"
 ]
 
 perpetrator = [
