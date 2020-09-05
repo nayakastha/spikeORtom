@@ -9,7 +9,7 @@ request.onload = function () {
   if (request.status >= 200 && request.status < 400) {
     data.forEach((MESSAGE) => {
       console.log(MESSAGE);
-      console.log("Ank");
+     
     })
   } else {
     console.log('error');
