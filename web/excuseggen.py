@@ -1,30 +1,30 @@
 import random
 leadIn = [
-"I'm sorry but",
-"Please forgive me",
-"Beg you a thousand pardons",
-"I apologize, however",
-"I'm never usually like this but",
-"You're never going to beleive this",
+"I'm sorry but,",
+"Please forgive me,",
+"Beg you a thousand pardons,",
+"I apologize, however,",
+"I'm never usually like this but,",
+"You're never going to beleive this,",
 "Guess what happened?!?",
-"Holy shit! Get this",
+"Holy shit! Get this,",
 "Boy do I have a story for you,",
 "So I was minding my own business and boom!",
-"The most unbelievable thing just happened",
+"The most unbelievable thing just happened,",
 "I couldn't be more apologetic, but",
 "Sorry I'm late,",
 "I couldn't go becuase",
-"I couldn't help it",
+"I couldn't help it,",
 "This is a terrible excuse but",
 "This going to sound crazy but",
 "Holy Moses!",
-"Blimey! Sorry I'm late guv'nha",
-"I swear it wasn't my fault",
+"Blimey! Sorry I'm late guv'nha,",
+"I swear it wasn't my fault,",
 "I lost track of time because",
 "I feel terrible, but",
-"Don't blame me"
-"Please,forgive me"
- "Sorry,but "
+"Don't blame me,"
+"Please,forgive me,"
+ "Sorry,but, "
 ]
 
 perpetrator = [
