@@ -1,6 +1,6 @@
 function myfunction() {
     document.getElementById("excuse").innerHTML = "Loading";
-    const Url = 'http://34.121.79.151/getx/';
+    const Url = 'http://35.208.101.72/getx/';
     const othePram = {
         headers: {
             "content-type": "application/json; charset=UTF-8"
@@ -18,7 +18,7 @@ function myfunction() {
 function longLoad() {
     document.getElementById("excuse").innerHTML = "Loading";
 
-    const Url = 'http://34.121.79.151/excuse/gen';
+    const Url = 'http://35.208.101.72/excuse/gen';
     const othePram = {
         headers: {
             "content-type": "application/json; charset=UTF-8"

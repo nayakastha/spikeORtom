@@ -10,7 +10,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   Future<String> getExcuse() async {
-    Response response = await Dio().get('http://34.121.79.151/getx/');
+    Response response = await Dio().get('http://35.208.101.72/getx/');
 
     return response.data['MESSAGE'].toString();
   }
