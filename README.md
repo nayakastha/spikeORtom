@@ -1,4 +1,4 @@
-# spikeORtom# Bunkit
+# Bunkit
 ##### A ML curated excusee, so that you can bunk your next class smoothly😎
 This project is built during first day back MLH hackathon.
 &NewLine;
