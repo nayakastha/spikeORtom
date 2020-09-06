@@ -28,8 +28,8 @@ To build the web app
 
 ### Functionalities
 There are 2 types of excuses this generates
-* A static excuse, which is basically a random combination of some excuses we have hardcoded, structured to give a syntactically correct sentence. You can get this by going to [localhost/getx](http://localhost/getx) or [from the live server here](http://34.72.142.129/getx/)
-* The other (fancier!!!) excuse is generated when we pass some random keywords from the above excuse to a gpt2 model. It gives out coherent sentences, with some absurdity of course(this baby is still learning how to make excuses). Each excuse takes 8-10s to generate so kindly bear with us for now. You can check it out on your localhost [localhost/excuse/gen](http://localhost/getx) or [from the live server here](http://34.72.142.129/excuse/gen)
+* A static excuse, which is basically a random combination of some excuses we have hardcoded, structured to give a syntactically correct sentence. You can get this by going to [localhost/getx](http://localhost/getx) or [from the live server here](http://35.208.101.72/getx/)
+* The other (fancier!!!) excuse is generated when we pass some random keywords from the above excuse to a gpt2 model. It gives out coherent sentences, with some absurdity of course(this baby is still learning how to make excuses). Each excuse takes 8-10s to generate so kindly bear with us for now. You can check it out on your localhost [localhost/excuse/gen](http://localhost/getx) or [from the live server here](http://35.208.101.72/excuse/gen)
 
 
 ### Limitations
