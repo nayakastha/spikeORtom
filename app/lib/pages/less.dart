@@ -10,7 +10,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   Future<String> getExcuse() async {
-    Response response = await Dio().get('http://34.72.142.129/getx/');
+    Response response = await Dio().get('http://34.121.79.151/getx/');
 
     return response.data['MESSAGE'].toString();
   }
@@ -55,7 +55,8 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ),
-                      Container(
+                      FractionallySizedBox(
+                        widthFactor: 0.6,
                         child: Hero(
                             tag: 'dash',
                             child: Image.asset('assets/images/boo.png')),
