@@ -1,40 +1,36 @@
-function myfunction()
-{var request = new XMLHttpRequest();
-var txtOutput = document.getElementById("txtOutput");
+function myfunction() {
+    document.getElementById("excuse").innerHTML = "Loading";
+    const Url = 'http://34.121.79.151/getx/';
+    const othePram = {
+        headers: {
+            "content-type": "application/json; charset=UTF-8"
+        },
+        method: "GET"
+    };
+    fetch(new URL(Url))
+        .then(data => data.json())
+        .then(res => {
+            document.getElementById("excuse").innerHTML = res.MESSAGE;
+        });
 
-request.open('GET', "http://34.72.142.129/getx/", true);
-request.onload = function () {
-  // Begin accessing JSON data here
-  var data = JSON.parse(this.request);
-
-  if (request.status >= 200 && request.status < 400) {
-    data.forEach((MESSAGE) => {
-      /*console.log(MESSAGE);*/
-      txtOutput.value = MESSAGE; 
-     
-    })
-  } else {
-    console.log('error');
-  }
 }
-};
-function myyfunction()
-{var request = new XMLHttpRequest();
-var txtOutput = document.getElementById("txtOutput");
 
-request.open('GET', "http://34.72.142.129/excuse/gen", true);
-request.onload = function () {
-  // Begin accessing JSON data here
-  var data = JSON.parse(this.request);
+function longLoad() {
+    document.getElementById("excuse").innerHTML = "Loading";
 
-  if (request.status >= 200 && request.status < 400) {
-    data.forEach((MESSAGE) => {
-      /*console.log(MESSAGE);*/
-      txtOutput.value = MESSAGE; 
-     
-    })
-  } else {
-    console.log('error');
-  }
+    const Url = 'http://34.121.79.151/excuse/gen';
+    const othePram = {
+        headers: {
+            "content-type": "application/json; charset=UTF-8"
+        },
+        method: "GET"
+    };
+    fetch(new URL(Url))
+        .then(data => data.json())
+        .then(res => {
+            console.log(res);
+            document.getElementById("excuse").innerHTML = res.excuses[0];
+
+        });
+
 }
-};
