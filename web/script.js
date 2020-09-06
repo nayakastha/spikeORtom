@@ -1,18 +1,28 @@
-function myfunction()
-{var request = new XMLHttpRequest();
+function myfunction() {
 
-request.open('GET', "https://xcusemaker.herokuapp.com/getx/", true);
-request.onload = function () {
-  // Begin accessing JSON data here
-  var data = JSON.parse(this.request);
+    const URL_1 = "https://xcusemaker.herokuapp.com/getx/";
+    var request = new XMLHttpRequest();
+    request.open('GET', "http://34.121.79.151/getx", true);
+    request.setRequestHeader('Access-Control-Allow-Origin', '*');
 
-  if (request.status >= 200 && request.status < 400) {
-    data.forEach((MESSAGE) => {
-      console.log(MESSAGE);
-     
-    })
-  } else {
-    console.log('error');
-  }
-}
+    request.send();
+
+    request.onreadystatechange = function() {
+        alert("leaded");
+        // Begin accessing JSON data here
+        var data = JSON.parse(this.request);
+
+        if (this.readyState == 4 && this.status == 200) {
+            alert(request.responseText);
+
+            // data.forEach((MESSAGE) => {
+            //     console.log(MESSAGE);
+            //     alert(MESSAGE);
+
+
+            // })
+        } else {
+            console.log('error');
+        }
+    }
 };
