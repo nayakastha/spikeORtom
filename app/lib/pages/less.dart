@@ -11,8 +11,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   Future<String> getExcuse() async {
-    Response response =
-        await Dio().get('https://xcusemaker.herokuapp.com/getx/');
+    Response response = await Dio().get('http://34.72.142.129/getx/');
 
     return response.data['MESSAGE'].toString();
   }
@@ -58,7 +57,9 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       Container(
-                        child: Image.asset('assets/images/boo.png'),
+                        child: Hero(
+                            tag: 'dash',
+                            child: Image.asset('assets/images/boo.png')),
                       ),
                       new Container(
                         //height: 170,
@@ -131,7 +132,16 @@ class _HomePageState extends State<HomePage> {
                 ),
               );
             } else {
-              return new Center(child: new CircularProgressIndicator());
+              return Container(
+                  height: double.infinity,
+                  width: double.infinity,
+                  decoration: new BoxDecoration(
+                    gradient: new LinearGradient(colors: [
+                      Colors.lightBlue[100],
+                      Color.fromRGBO(12, 186, 194, 1)
+                    ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
+                  ),
+                  child: Center(child: new CircularProgressIndicator()));
             } // unreachable
           },
         ),
