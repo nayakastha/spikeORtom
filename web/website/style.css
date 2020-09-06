@@ -54,7 +54,11 @@ body{
 
 }
 
-
-  img{
+ /*img{
     margin-left: 355px;
-  }
+  }*/
+
+.but{
+    width:1000 px;
+    height:1000 px;
+}
