@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import 'dart:async';
+import 'package:animator/animator.dart';
 
 class NewPage extends StatefulWidget {
   @override
@@ -14,20 +15,8 @@ class _NewPageState extends State<NewPage> with TickerProviderStateMixin {
     return response.data['excuses'][0].toString();
   }
 
-  Animation ghost;
-  AnimationController ghostcontroller;
   @override
   void initState() {
-    ghostcontroller =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 300));
-    ghost = Tween(begin: 150.0, end: 170.0).animate(
-        CurvedAnimation(curve: Curves.bounceOut, parent: ghostcontroller));
-    ghostcontroller.addStatusListener((AnimationStatus status) {
-      if (status == AnimationStatus.completed) {
-        ghostcontroller.repeat();
-      }
-      ghostcontroller.forward();
-    });
     super.initState();
   }
 
@@ -59,13 +48,16 @@ class _NewPageState extends State<NewPage> with TickerProviderStateMixin {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: <Widget>[
-                            IconButton(
-                              onPressed: () {
-                                Navigator.pop(context);
-                              },
-                              icon: Icon(
-                                Icons.arrow_back_ios,
-                                color: Colors.blue[900],
+                            Container(
+                              padding: EdgeInsets.only(top: 20),
+                              child: IconButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                icon: Icon(
+                                  Icons.arrow_back_ios,
+                                  color: Colors.blue[900],
+                                ),
                               ),
                             ),
                           ],
@@ -120,9 +112,10 @@ class _NewPageState extends State<NewPage> with TickerProviderStateMixin {
                           ),
                           Container(
                             padding: EdgeInsets.all(20.0),
-                            child: AnimatedBuilder(
-                                animation: ghostcontroller,
-                                builder: (context, child) {
+                            child: Animator<double>(
+                                tween: Tween<double>(begin: 0, end: 300),
+                                cycles: 10,
+                                builder: (context, animatorState, child) {
                                   return CircleAvatar(
                                     radius: 120,
                                     backgroundColor: Colors.transparent,

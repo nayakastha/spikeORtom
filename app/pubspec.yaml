@@ -31,6 +31,7 @@ dependencies:
   cupertino_icons: ^0.1.3
   dio: 
   google_fonts:
+  animator:   
 
 dev_dependencies:
   flutter_test:

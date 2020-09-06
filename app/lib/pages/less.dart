@@ -1,7 +1,6 @@
 import 'package:app/pages/more.dart';
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
-import '../pages/less.dart';
 import 'dart:async';
 
 class HomePage extends StatefulWidget {
@@ -42,7 +41,7 @@ class _HomePageState extends State<HomePage> {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
                       SizedBox(
-                        height: 60,
+                        height: 40,
                       ),
                       Container(
                         child: Center(
