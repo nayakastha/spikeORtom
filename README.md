@@ -19,7 +19,7 @@ To build the flutter app, make sure you have android sdk and flutter sdk already
 * `cd app`
 * 'flutter build apk -release'
 
-[just in case you are unable to do that here's the apk file](https://github.com/nayakastha/spikeORtom/blob/master/app/BunkIt.apk)
+[just in case you are unable to do that here's the apk file](https://github.com/nayakastha/spikeORtom/blob/master/app/bunkit-release.apk)
 
 To build the web app
 * Open the root in shell and run `cd web-gpt2`
