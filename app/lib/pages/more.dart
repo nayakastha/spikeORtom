@@ -72,7 +72,8 @@ class _NewPageState extends State<NewPage> with TickerProviderStateMixin {
                                 fontWeight: FontWeight.w700),
                           ),
                         ),
-                        Container(
+                        FractionallySizedBox(
+                          widthFactor: 0.5,
                           child: Hero(
                               tag: 'dash',
                               child: Image.asset('assets/images/boo.png')),

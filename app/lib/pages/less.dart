@@ -55,7 +55,8 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ),
-                      Container(
+                      FractionallySizedBox(
+                        widthFactor: 0.6,
                         child: Hero(
                             tag: 'dash',
                             child: Image.asset('assets/images/boo.png')),
