@@ -1,18 +1,36 @@
 function myfunction() {
-    var request = new XMLHttpRequest();
+    document.getElementById("excuse").innerHTML = "Loading";
+    const Url = 'http://34.121.79.151/getx/';
+    const othePram = {
+        headers: {
+            "content-type": "application/json; charset=UTF-8"
+        },
+        method: "GET"
+    };
+    fetch(new URL(Url))
+        .then(data => data.json())
+        .then(res => {
+            document.getElementById("excuse").innerHTML = res.MESSAGE;
+        });
 
-    request.open('GET', "https://xcusemaker.herokuapp.com/getx/", true);
-    request.onload = function() {
-        // Begin accessing JSON data here
-        var data = JSON.parse(this.request);
+}
 
-        if (request.status >= 200 && request.status < 400) {
-            data.forEach((MESSAGE) => {
-                console.log(MESSAGE);
+function longLoad() {
+    document.getElementById("excuse").innerHTML = "Loading";
 
-            })
-        } else {
-            console.log('error');
-        }
-    }
-};
+    const Url = 'http://34.121.79.151/excuse/gen';
+    const othePram = {
+        headers: {
+            "content-type": "application/json; charset=UTF-8"
+        },
+        method: "GET"
+    };
+    fetch(new URL(Url))
+        .then(data => data.json())
+        .then(res => {
+            console.log(res);
+            document.getElementById("excuse").innerHTML = res.excuses[0];
+
+        });
+
+}
