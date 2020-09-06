@@ -10,7 +10,7 @@ class NewPage extends StatefulWidget {
 
 class _NewPageState extends State<NewPage> with TickerProviderStateMixin {
   Future<String> getmoreExcuse() async {
-    Response response = await Dio().get('http://34.72.142.129/excuse/gen');
+    Response response = await Dio().get('http://34.121.79.151/excuse/gen');
 
     return response.data['excuses'][0].toString();
   }
