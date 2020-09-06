@@ -1,5 +1,5 @@
 # Bunkit
-##### A ML curated excusee, so that you can bunk your next class smoothly😎
+##### A ML curated excuse maker, so that you can bunk your next class smoothly😎
 This project is built during first day back MLH hackathon.
 &NewLine;
 ### What on earth is this?
