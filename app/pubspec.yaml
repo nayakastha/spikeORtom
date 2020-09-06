@@ -31,7 +31,8 @@ dependencies:
   cupertino_icons: ^0.1.3
   dio: 
   google_fonts:
-  animator:   
+  animator:
+  flutter_launcher_icons:    
 
 dev_dependencies:
   flutter_test:
@@ -52,7 +53,7 @@ flutter:
   assets:
     - assets/images/boo.png
     # - assets/images/dogcat.png
-
+  
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
